@@ -20,4 +20,12 @@ describe('Shop', () => {
   it('Shout return 15 for a single letter letter D', () => {
     expect(shop.checkout('D')).toEqual(15);
   });
+
+  it('Shout return -1 for a invalid input', () => {
+    expect(shop.checkout(18)).toEqual(-1);
+  });
+
+  it('Shout return the sum of inputs', () => {
+    expect(shop.checkout('AA')).toEqual(100);
+  });
 });
