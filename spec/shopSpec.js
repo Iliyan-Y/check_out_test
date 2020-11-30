@@ -32,4 +32,11 @@ describe('Shop', () => {
   it('Shout return the sum of all different inputs', () => {
     expect(shop.checkout('ABCD')).toEqual(115);
   });
+
+  it('return -1 for invalid string of multiple characters', () => {
+    expect(shop.checkout('aBc')).toEqual(-1);
+  });
+  it('TEST 2 for for invalid string of multiple characters', () => {
+    expect(shop.checkout('-B8x')).toEqual(-1);
+  });
 });
