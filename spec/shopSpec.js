@@ -36,7 +36,12 @@ describe('Shop', () => {
   it('return -1 for invalid string of multiple characters', () => {
     expect(shop.checkout('aBc')).toEqual(-1);
   });
+
   it('TEST 2 for for invalid string of multiple characters', () => {
     expect(shop.checkout('-B8x')).toEqual(-1);
+  });
+
+  it('Return discounted price when offer available', () => {
+    expect(shop.checkout('AAA')).toEqual(130);
   });
 });
