@@ -28,4 +28,8 @@ describe('Shop', () => {
   it('Shout return the sum of inputs', () => {
     expect(shop.checkout('AA')).toEqual(100);
   });
+
+  it('Shout return the sum of all different inputs', () => {
+    expect(shop.checkout('ABCD')).toEqual(115);
+  });
 });
