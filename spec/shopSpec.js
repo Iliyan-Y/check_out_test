@@ -44,4 +44,20 @@ describe('Shop', () => {
   it('Return discounted price when offer available', () => {
     expect(shop.checkout('AAA')).toEqual(130);
   });
+
+  it('Return discounted price when double offer available', () => {
+    expect(shop.checkout('AAAAAA')).toEqual(260);
+  });
+
+  it('Return discounted price when offer available on B', () => {
+    expect(shop.checkout('BB')).toEqual(45);
+  });
+
+  it('Return discounted price when multiple offer available on B', () => {
+    expect(shop.checkout('BBBB')).toEqual(90);
+  });
+
+  it('Return discounted price when multiple offer available on A B and normal C', () => {
+    expect(shop.checkout('BBBBAAAD')).toEqual(235);
+  });
 });
